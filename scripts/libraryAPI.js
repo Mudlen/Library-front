@@ -2,10 +2,11 @@ Vue.component('base-head-table', {
    template:
        '<thead class="table-primary">' +
             '<tr>' +
-                '<th class="text-center" style="width: 5%">Id</th>'+
+                // '<th class="text-center" style="width: 5%">Id</th>'+
                 '<th class="text-start" style="width: 55%">Name</th>'+
                 '<th class="text-center" style="width: 10%">Format</th>'+
                 '<th class="text-center" style="width: 10%">Download</th>'+
+                '<th class="text-center" style="width: 5%"></th>'+
             '</tr>'+
        '</thead>'
 });
@@ -15,10 +16,10 @@ Vue.component('base-body-table', {
     template:
         '<tbody class="search-input">' +
             '<tr class="" v-for="file in files" v-bind:key="file.id">' +
-                '<td class="text-center" >{{ file.id }}</td>' +
                 '<td class="">{{ file.name }}</td>' +
                 '<td class="text-center">{{ file.format }}</td>' +
                 '<td class="text-center"><a download v-bind:href="file.download"><span class="bi-download"></span></a></td>' +
+                '<td class="text-center"><button style="color: darkorange" class="btn bi-star-fill"></button> </td>' +
             '</tr>' +
         '</tbody>'
 });
